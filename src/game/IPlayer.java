@@ -1,8 +1,9 @@
-package game;/* ************************************************************************* *\
+package game;
+/* ************************************************************************* *\
 *                Programmierung 1 HS 2020 - Serie 5-1                         * 
 \* ************************************************************************* */
 
-/** Interface for VierGewinnt players */
+/** Interface for game.VierGewinnt players */
 public interface IPlayer
 {
 

@@ -1,11 +1,6 @@
-/* ************************************************************************* *\
+package game;/* ************************************************************************* *\
 *                Programmierung 1 HS 2020 - Serie 5-1                         * 
 \* ************************************************************************* */
-
-import game.ComputerPlayer;
-import game.HumanPlayer;
-import game.IPlayer;
-import game.Token;
 
 import java.util.Arrays;
 import java.util.Scanner;
