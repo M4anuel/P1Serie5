@@ -1,4 +1,5 @@
-package game;/* ************************************************************************* *\
+package game;
+/* ************************************************************************* *\
 *                Programmierung 1 HS 2020 - Serie 5-1                         * 
 \* ************************************************************************* */
 
@@ -8,8 +9,8 @@ package game;/* ****************************************************************
  */
 public enum Token {
        empty( " " ),
-       player1( "O" ),
-       player2( "X" );
+       player1( "⚪" ),
+       player2( "⬤" );
        private String representation; // string representation of value
        Token( String s ) { this.representation = s; }
        public String toString() { return this.representation; }
