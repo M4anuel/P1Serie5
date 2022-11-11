@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="newprojetk">
-      <change afterPath="$PROJECT_DIR$/src/Vorlesung111122.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matrizen/Matrix.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matrizen/MatrixTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matrizen/test.java" afterDir="false" />
+    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="Matrix reader gemacht">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/VierGewinnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinnt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matrizen/Matrix.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/Matrix.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matrizen/MatrixTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/MatrixTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667559524220</updated>
       <workItem from="1667559529868" duration="79000" />
-      <workItem from="1668168966056" duration="2949000" />
+      <workItem from="1668168966056" duration="4053000" />
     </task>
     <task id="LOCAL-00001" summary="newprojetk">
       <created>1667999431696</created>
@@ -85,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667999431696</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Matrix reader gemacht">
+      <created>1668172623822</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668172623822</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="newprojetk" />
-    <option name="LAST_COMMIT_MESSAGE" value="newprojetk" />
+    <MESSAGE value="Matrix reader gemacht" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix reader gemacht" />
   </component>
 </project>

@@ -7,6 +7,21 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MatrixOperations {
+    public static int[][] transpose(int[][] arr){
+        for (int i = 0; i < arr.length; i++){
+            if (arr.length!=arr[i].length){
+                return null;
+            }
+        }
+
+        int[][] array = new int[arr.length][arr[1].length];
+        for (int i = 0;i < arr.length; i++){
+            for (int j = 0; j < arr[1].length;j++){
+                array[i][j]=arr[j][i];
+            }
+        }
+        return array;
+    }
     public static int[][] readMatrix(File file) throws FileNotFoundException {
         Scanner scanner = new Scanner(file);
         int lineNumber = 1;
@@ -22,7 +37,12 @@ public class MatrixOperations {
                     arr.add(Integer.valueOf(line.substring(i, end)));
                 }
             }
-            arr.add(Integer.valueOf(line.substring(end+1)));
+            if (line.length()==1){
+                arr.add(Integer.valueOf(line));
+            }
+            else{
+                arr.add(Integer.valueOf(line.substring(end+1)));
+            }
             arrlist.add(arr);
             if ((arr.size() > maxSize)) {
                 maxSize = arr.size();
