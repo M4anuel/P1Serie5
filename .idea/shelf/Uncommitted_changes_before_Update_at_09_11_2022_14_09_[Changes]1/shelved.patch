@@ -1,0 +1,258 @@
+Index: src/game/IPlayer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/game/IPlayer.java b/src/game/IPlayer.java
+--- a/src/game/IPlayer.java	
++++ b/src/game/IPlayer.java	
+@@ -2,7 +2,7 @@
+ *                Programmierung 1 HS 2020 - Serie 5-1                         * 
+ \* ************************************************************************* */
+ 
+-/** Interface for VierGewinnt players */
++/** Interface for game.VierGewinnt players */
+ public interface IPlayer
+ {
+ 
+Index: src/game/Token.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/game/Token.java b/src/game/Token.java
+--- a/src/game/Token.java	
++++ b/src/game/Token.java	
+@@ -1,4 +1,5 @@
+-package game;/* ************************************************************************* *\
++package game;
++/* ************************************************************************* *\
+ *                Programmierung 1 HS 2020 - Serie 5-1                         * 
+ \* ************************************************************************* */
+ 
+@@ -8,8 +9,8 @@
+  */
+ public enum Token {
+        empty( " " ),
+-       player1( "O" ),
+-       player2( "X" );
++       player1( "⚪" ),
++       player2( "⬤" );
+        private String representation; // string representation of value
+        Token( String s ) { this.representation = s; }
+        public String toString() { return this.representation; }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,25 +1,24 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/P1Serie5.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/P1Serie5.tex" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/P1_Serie5.pdf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/VierGewinnt.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/game/ComputerPlayer.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/game/HumanPlayer.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/game/IPlayer.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/game/Token.java" afterDir="false" />
++    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="newprojetk">
++      <change afterPath="$PROJECT_DIR$/src/matrizen/test.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/VierGewinnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinnt.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/game/IPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/IPlayer.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/game/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Token.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -35,17 +34,51 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0"
+-  }
+-}]]></component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
++  }
++}</component>
++  <component name="RunManager" selected="Application.test">
++    <configuration name="VierGewinnt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="game.VierGewinnt" />
++      <module name="P1Serie5" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="game.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="matrizen.test" />
++      <module name="P1Serie5" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="matrizen.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.test" />
++        <item itemvalue="Application.VierGewinnt" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -55,7 +88,16 @@
+       <option name="presentableId" value="Default" />
+       <updated>1667559524220</updated>
+       <workItem from="1667559529868" duration="79000" />
++      <workItem from="1667562675650" duration="6681000" />
+     </task>
++    <task id="LOCAL-00001" summary="newprojetk">
++      <created>1667562856031</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1667562856031</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -74,5 +116,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++    <MESSAGE value="newprojetk" />
++    <option name="LAST_COMMIT_MESSAGE" value="newprojetk" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/matrizen/test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/matrizen/test.java b/src/matrizen/test.java
+new file mode 100644
+--- /dev/null	
++++ b/src/matrizen/test.java	
+@@ -0,0 +1,69 @@
++package matrizen;
++
++import java.util.ArrayList;
++import java.util.Arrays;
++import java.util.Scanner;
++
++public class test {
++    public static void main(String[] args) {
++        System.out.println(minFinder(3, 124,31, 351,315,315,1353));
++        int[] arr = new int[]{ 1,2,3,4,5,6,7,8,9,10 };
++        int[][] arr2 = new int[][]{ {1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10} };
++        System.out.println(Arrays.toString(swap(arr, 2, 3)));
++        System.out.println(span(arr2));
++        System.out.println(Arrays.toString(lettercounter("aAaa")));
++    }
++    public static double minFinder(double first, double ... others){
++        double min = first;
++        for (double val : others)
++            min = Math.min(min, val);
++        return min;
++    }
++    public static int[] swap(int[] arr, int i, int j){
++        arr[i] = arr[i] + arr[j];
++        arr[j] = arr[i] - arr[j];
++        arr[i] = arr[i] - arr[j];
++        return arr;
++    }
++    public static int[] findInts(String s){
++        ArrayList<Integer> arr = new ArrayList<>();
++        int begin = 0;
++        int end = 0;
++        for (int i = 0; i<s.length()-1; i++){
++            if (' '==s.charAt(i+1)){
++                end = i;
++                i++;
++                arr.add(Integer.valueOf(s.substring(begin,end)));
++                begin = i+1;
++            }
++        }
++        return null;
++    }
++    public static int[] lettercounter(String s){
++        s=s.toLowerCase();
++        int[] letterCount = new int[26];
++        for (int i = 'a'; i<'z';i++){
++            for (int j = 0; j < s.length(); j++){
++                if (s.charAt(j)==i){
++                    letterCount[i-97]++;
++                }
++            }
++        }
++        return letterCount;
++    }
++    public static int span(int[][] arr){
++        int min = arr[0][0];
++        int max = arr[0][0];
++        for (int i = 0; i < arr.length; i++){
++            for(int j = 0; j< arr[i].length; j++){
++                if (arr[i][j]<min){
++                    min=arr[i][j];
++                }
++                else if(arr[i][j]>max){
++                    max=arr[i][j];
++                }
++            }
++        }
++        return max-min;
++    }
++}

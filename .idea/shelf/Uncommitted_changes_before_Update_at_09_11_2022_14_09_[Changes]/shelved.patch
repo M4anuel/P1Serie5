@@ -1,0 +1,36 @@
+Index: src/VierGewinnt.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/VierGewinnt.java b/src/game/VierGewinnt.java
+rename from src/VierGewinnt.java
+rename to src/game/VierGewinnt.java
+--- a/src/VierGewinnt.java	
++++ b/src/game/VierGewinnt.java	
+@@ -1,12 +1,7 @@
+-/* ************************************************************************* *\
++package game;/* ************************************************************************* *\
+ *                Programmierung 1 HS 2020 - Serie 5-1                         * 
+ \* ************************************************************************* */
+ 
+-import game.ComputerPlayer;
+-import game.HumanPlayer;
+-import game.IPlayer;
+-import game.Token;
+-
+ import java.util.Arrays;
+ import java.util.Scanner;
+ 
+@@ -47,8 +42,10 @@
+ 		/* play... */
+ 		boolean solved = false;
+ 		int currentPlayer = ( new java.util.Random() ).nextInt( 2 );  //choose randomly who begins
+-		System.out.println( "current player: " + currentPlayer );
++		System.out.println( "current player: " + players[currentPlayer].getPlayersName() );
+ 		int insertCol, insertRow; // starting from 0
++
++
+ 		while ( !solved && !this.isBoardFull() ) {
+ 			// get player's next "move"
+ 			// note that we pass only a copy of the board as an argument,
