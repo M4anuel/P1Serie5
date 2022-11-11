@@ -9,7 +9,7 @@ public class MatrixTest {
 
         File file = new File("src/matrizen/Matrix.txt");
         File fileA = new File("src/matrizen/MatrixA.txt");
-        File fileB = new File("src/matrizen/MatrixA.txt");
+        File fileB = new File("src/matrizen/MatrixB.txt");
 
         int[][]arr = MatrixOperations.readMatrix(file);
         printMatrix(arr);
