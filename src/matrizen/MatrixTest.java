@@ -9,7 +9,6 @@ public class MatrixTest {
         File file = new File("src/matrizen/Matrix.txt");
         int[][]arr = MatrixOperations.readMatrix(file);
         printMatrix(arr);
-
         printMatrix(MatrixOperations.transpose(arr));
 
     }
@@ -17,7 +16,7 @@ public class MatrixTest {
         String s = Arrays.deepToString(arr);
         int start = 0;
         for (int i = 0; i < s.length()-2; i++){
-            if ((s.substring(i,i+2)).equals("],")) {
+            if ((s).startsWith("],", i)) {
                 System.out.println(s.substring(start, i + 2));
                 start = i + 2;
             }

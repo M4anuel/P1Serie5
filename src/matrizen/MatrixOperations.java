@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class MatrixOperations {
     public static int[][] transpose(int[][] arr){
-        for (int i = 0; i < arr.length; i++){
-            if (arr.length!=arr[i].length){
+        for (int[] ints : arr) {
+            if (arr.length != ints.length) {
                 return null;
             }
         }
