@@ -6,10 +6,16 @@ import java.util.Arrays;
 
 public class MatrixTest {
     public static void main(String[] args) throws FileNotFoundException {
+
         File file = new File("src/matrizen/Matrix.txt");
+        File fileA = new File("src/matrizen/MatrixA.txt");
+        File fileB = new File("src/matrizen/MatrixA.txt");
+
         int[][]arr = MatrixOperations.readMatrix(file);
         printMatrix(arr);
         printMatrix(MatrixOperations.transpose(arr));
+        int[][] matA = MatrixOperations.readMatrix(fileA);
+        int[][] matB = MatrixOperations.readMatrix(fileB);
 
     }
     public static void printMatrix(int[][] arr){
