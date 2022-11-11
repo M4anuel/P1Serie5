@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1Serie5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/P1Serie5.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/P1_Serie5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VierGewinnt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/ComputerPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/HumanPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/IPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Token.java" afterDir="false" />
+    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="newprojetk">
+      <change afterPath="$PROJECT_DIR$/src/Vorlesung111122.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/matrizen/Matrix.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/matrizen/MatrixTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/matrizen/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/VierGewinnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinnt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,11 +42,31 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="MatrixTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="matrizen.MatrixTest" />
+      <module name="P1Serie5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="matrizen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MatrixTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,7 +76,16 @@
       <option name="presentableId" value="Default" />
       <updated>1667559524220</updated>
       <workItem from="1667559529868" duration="79000" />
+      <workItem from="1668168966056" duration="2949000" />
     </task>
+    <task id="LOCAL-00001" summary="newprojetk">
+      <created>1667999431696</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667999431696</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,5 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="newprojetk" />
+    <option name="LAST_COMMIT_MESSAGE" value="newprojetk" />
   </component>
 </project>

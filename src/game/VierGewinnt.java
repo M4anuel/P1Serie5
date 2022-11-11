@@ -48,7 +48,7 @@ public class VierGewinnt
 			// get player's next "move"
 			// note that we pass only a copy of the board as an argument,
 			// otherwise the player would be able to manipulate the board and cheat!
-			insertCol = players[ currentPlayer ].getNextColumn( getCopyOfBoard() );
+			insertCol = players[ currentPlayer ].getNextColumn( getCopyOfBoard() ); //luegt numme ob d column voll isch oder ni
 			// insert the token and get the row where it landed
 			insertRow = this.insertToken( insertCol, players[ currentPlayer ].getToken() );
 			// check if the game is over
@@ -71,8 +71,8 @@ public class VierGewinnt
 	 * @param token the players token
 	 * @return the row where the token landed 
 	 */
-	private int insertToken( int column, Token tok )
-	{
+	private int insertToken( int column, Token tok ) {
+
 		//TODO: Your code goes here
 		return -1; //TODO: Replace this line
 	}
