@@ -6,9 +6,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MatrixOperations {
-    public static int[][] product(int[][] matA, int[][] matB){
+    public static int[][] product(int[][] matrix1, int[][] matrix2){
+        int[][] matrix3 = new int[matrix1.length][matrix1.length];
+        for(int i=0; i<matrix1.length;i++){
 
-        return null;
+            //control
+            if(matrix1.length!=matrix2[i].length){
+                return null;
+            }
+
+            for(int j=0; j<=matrix1.length-1; j++){
+                for(int k=0; k<=matrix1.length-1; k++){
+                    matrix3[i][j] += matrix1[i][k]*matrix2[k][j];
+                }
+            }
+        }
+        return matrix3;
     }
     public static int[][] transpose(int[][] arr){
         for (int[] ints : arr) {
@@ -26,6 +39,7 @@ public class MatrixOperations {
         return array;
     }
     public static int[][] readMatrix(File file) throws FileNotFoundException {
+        //file input stream
         Scanner scanner = new Scanner(file);
         int maxSize = 1;
         ArrayList<ArrayList<Integer>> arrlist = new ArrayList<>();

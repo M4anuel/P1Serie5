@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="MatrixProduct Methode begonnen, MatrixReader optimiert mit einem neuen Scannerm welcher .useDelimiter braucht">
-      <change beforePath="$PROJECT_DIR$/src/matrizen/MatrixTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/MatrixTest.java" afterDir="false" />
+    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="d">
+      <change afterPath="$PROJECT_DIR$/src/game/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matrizen/Matrix.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/Matrix.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +40,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
-  }
-}]]></component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.MatrixTest">
+    <configuration name="Concurrent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="matrizen.Concurrent" />
+      <module name="P1Serie5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="matrizen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MatrixTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="matrizen.MatrixTest" />
       <module name="P1Serie5" />
@@ -58,6 +74,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MatrixTest" />
+        <item itemvalue="Application.Concurrent" />
       </list>
     </recent_temporary>
   </component>
@@ -70,51 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667559524220</updated>
       <workItem from="1667559529868" duration="79000" />
-      <workItem from="1668168966056" duration="5490000" />
     </task>
-    <task id="LOCAL-00001" summary="newprojetk">
-      <created>1667999431696</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1667999431696</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Matrix reader gemacht">
-      <created>1668172623822</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668172623822</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Matrix reader gemacht">
-      <created>1668174019523</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1668174019523</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Matrix Transponierer gemacht">
-      <created>1668174045567</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1668174045567</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Matrix Transponierer gemacht">
-      <created>1668174130855</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1668174130855</updated>
-    </task>
-    <task id="LOCAL-00006" summary="MatrixProduct Methode begonnen, MatrixReader optimiert mit einem neuen Scannerm welcher .useDelimiter braucht">
-      <created>1668175113789</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1668175113789</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,10 +106,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="newprojetk" />
-    <MESSAGE value="Matrix reader gemacht" />
-    <MESSAGE value="Matrix Transponierer gemacht" />
-    <MESSAGE value="MatrixProduct Methode begonnen, MatrixReader optimiert mit einem neuen Scannerm welcher .useDelimiter braucht" />
-    <option name="LAST_COMMIT_MESSAGE" value="MatrixProduct Methode begonnen, MatrixReader optimiert mit einem neuen Scannerm welcher .useDelimiter braucht" />
   </component>
 </project>

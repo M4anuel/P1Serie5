@@ -16,6 +16,7 @@ public class MatrixTest {
         printMatrix(MatrixOperations.transpose(arr));
         int[][] matA = MatrixOperations.readMatrix(fileA);
         int[][] matB = MatrixOperations.readMatrix(fileB);
+        printMatrix(MatrixOperations.product(matA,matB));
 
     }
     public static void printMatrix(int[][] arr){
