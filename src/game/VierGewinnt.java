@@ -115,17 +115,19 @@ public class VierGewinnt
 	}
 	private boolean checkRowWin(int col, int row, Token tok){
 		int inrow = 1;
-		for (int i = 1; i<this.board.length-row && i<4;i++){//test-1 for bug
+		for (int i = 1; i<this.board.length-col && i<4;i++){//test-1 for bug
 			if (this.board[col+i][row]==tok){
 				inrow++;
 			}
-			else{i = this.board.length;}
+			else break;
+			if(inrow >=4) break;
 		}
 		for (int i = 1; i<col+1&&i<4;i++){
 			if (this.board[col-i][row]==tok){
 				inrow++;
 			}
-			else{i = col+1;}
+			else break;
+			if(inrow >=4) break;
 		}
 		return inrow>=4;
 	}
@@ -140,16 +142,16 @@ public class VierGewinnt
 			if (this.board[col+i][row-i]==tok){
 				inrow++;
 			}
-			else{i=4;}
+			else break;
 		}
 		//bottom left direction
 		for (int i = 1; i < 4 && i < col+1 && i < ROWS-row-1; i++){
 			if (this.board[col+i][row-i]==tok){
 				inrow++;
 			}
-			else{i=4;}
+			else break;
 		}
-
+		if (inrow >= 4) System.out.println("BLTR");
 		return inrow>=4;
 		/*
 		for (int i = 1; i<this.board.length-row&&i<this.board[col].length;i++){
@@ -177,15 +179,16 @@ public class VierGewinnt
 			if (this.board[col-i][row-i]==tok){
 				inrow++;
 			}
-			else{i=4;}
+			else break;
 		}
 		//bottom right direction
 		for (int i = 1; i < 4 && i < COLS-col-1 && i < ROWS-row; i++){
 			if (this.board[col+i][row+i]==tok){
 				inrow++;
 			}
-			else{i=4;}
+			else break;
 		}
+		if (inrow >= 4) System.out.println("BRTL");
 		return inrow>=4;
 		/*
 		for (int i = 1; i<(this.board[col].length)-row && i<(this.board.length)-col; i++){
