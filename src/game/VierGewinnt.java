@@ -94,10 +94,6 @@ public class VierGewinnt
 	 * either direction, starting from the given position.
 	 */
 
-	/**
-	 * Checks for at least four equal tokens in a row in
-	 * either direction, starting from the given position.
-	 */
 	private boolean checkVierGewinnt( int col, int row ){
 		Token tok = this.board[col][row];
 		return checkColumnWin(col, row, tok)|| checkRowWin(col,row,tok)||checkDiagonalWin(col,row,tok);
@@ -115,19 +111,17 @@ public class VierGewinnt
 	}
 	private boolean checkRowWin(int col, int row, Token tok){
 		int inrow = 1;
-		for (int i = 1; i<this.board.length-col && i<4;i++){//test-1 for bug
+		for (int i = 1; i<this.board.length-row && i<4;i++){//test-1 for bug
 			if (this.board[col+i][row]==tok){
 				inrow++;
 			}
-			else break;
-			if(inrow >=4) break;
+			else{i = this.board.length;}
 		}
 		for (int i = 1; i<col+1&&i<4;i++){
 			if (this.board[col-i][row]==tok){
 				inrow++;
 			}
-			else break;
-			if(inrow >=4) break;
+			else{i = col+1;}
 		}
 		return inrow>=4;
 	}
@@ -138,89 +132,35 @@ public class VierGewinnt
 	private boolean checkBLTR(int row, int col, Token tok){
 		int inrow = 1;
 		//top right direction (in the output it's the bottom right direction)
-		for (int i = 1; i < 4 && i < COLS-col-1 && i < row; i++){
-			if (this.board[col+i][row-i]==tok){
-				inrow++;
-			}
-			else break;
+		for (int i = 1; i < 4 && i < col && i < ROWS-row; i++){
+			if (this.board[col-i][row+i]==tok){inrow++;}
+			else{break;}
 		}
 		//bottom left direction
-		for (int i = 1; i < 4 && i < col+1 && i < ROWS-row-1; i++){
-			if (this.board[col+i][row-i]==tok){
-				inrow++;
-			}
-			else break;
-		}
-		if (inrow >= 4) System.out.println("BLTR");
-		return inrow>=4;
-		/*
-		for (int i = 1; i<this.board.length-row&&i<this.board[col].length;i++){
-			try{
-				if (this.board[col+i][row+i]==tok){
-					inrow++;
-				}
-				else{i = this.board.length;}
-			}catch (ArrayIndexOutOfBoundsException ignored){i=this.board.length;}
-		}
-		for (int i = 1; i<col+1&&i<row+1;i++){
-			if (this.board[col-i][row-i]==tok){
-				inrow++;
-			}
-			else{i = col+1;}
+		for (int i = 1; i < 4 && i < COLS-col && i < row; i++){
+			if (this.board[col+i][row-i]==tok){inrow++;}
+			else{break;}
 		}
 		return inrow>=4;
-		 */
 	}
+
 	//BRTL = Bottom Right to Top Left
 	private boolean checkBRTL(int row, int col, Token tok){
 		int inrow = 1;
 		//top left direction
-		for (int i = 1; i < 4 && i < col+1 && i < row; i++){
-			if (this.board[col-i][row-i]==tok){
-				inrow++;
-			}
-			else break;
+		for (int i = 1; i < 4 && i < ROWS-row && i < COLS-col; i++){
+			if (this.board[col+i][row+i]==tok){inrow++;}
+			else{break;}
 		}
 		//bottom right direction
-		for (int i = 1; i < 4 && i < COLS-col-1 && i < ROWS-row; i++){
-			if (this.board[col+i][row+i]==tok){
-				inrow++;
-			}
-			else break;
+		for (int i = 1; i < 4 && i < row && i < col; i++){
+			if (this.board[col-i][row-i]==tok){inrow++;}
+			else{break;}
 		}
-		if (inrow >= 4) System.out.println("BRTL");
 		return inrow>=4;
-		/*
-		for (int i = 1; i<(this.board[col].length)-row && i<(this.board.length)-col; i++){
-			try{
-			if (this.board[col-i][row+i]==tok){
-				inrow++;
-			}
-			else{i=this.board.length;}
-			}catch (ArrayIndexOutOfBoundsException ignored){i=this.board.length;}
-		}
-		for (int i = 1; i<row && i<col; i++){
-			if (this.board[col+i][row-i]==tok){
-				inrow++;
-			}
-			else{i=row;}
-		}
-		 */
 	}
 
-
-
 	/** Returns a (deep) copy of the board array */
-
-
-
-
-
-
-
-
-
-
 	private Token[][] getCopyOfBoard()
 	{
 		Token[][] copiedBoard = new Token[ COLS ][ ROWS ];
