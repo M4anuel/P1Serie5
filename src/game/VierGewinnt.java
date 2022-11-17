@@ -1,20 +1,14 @@
 package game;/* ************************************************************************* *\
 *                Programmierung 1 HS 2020 - Serie 5-1                         * 
 \* ************************************************************************* */
-
 import java.util.Arrays;
 import java.util.Scanner;
-
-
 public class VierGewinnt
 {
-
 	public static final int COLS = 7;
 	public static final int ROWS = 6;
-
 	private Token[][] board = new Token[ COLS ][ ROWS ]; // 7 columns with 6 fields each
 	private IPlayer[] players = new IPlayer[ 2 ]; // two players
-
 	/** initialize board and players and start the game */
 	public void play()
 	{
@@ -22,7 +16,6 @@ public class VierGewinnt
 		for ( Token[] column : this.board ) {
 			Arrays.fill( column, Token.empty );
 		}
-
 		/* initialize players */
 		players[ 0 ] = new HumanPlayer();
 		System.out.print( "Play against a human opponent? (y / n) " );
@@ -38,7 +31,6 @@ public class VierGewinnt
 		}
 		players[ 0 ].setToken( Token.player1 );
 		players[ 1 ].setToken( Token.player2 );
-
 		/* play... */
 		boolean solved = false;
 		int currentPlayer = ( new java.util.Random() ).nextInt( 2 );  //choose randomly who begins
@@ -52,6 +44,7 @@ public class VierGewinnt
 			// insert the token and get the row where it landed
 			insertRow = this.insertToken( insertCol, players[ currentPlayer ].getToken() );
 			// check if the game is over
+
 			solved = this.checkVierGewinnt( insertCol, insertRow );
 			//switch to other player
 			if ( !solved )
@@ -63,13 +56,11 @@ public class VierGewinnt
 		else
 			System.out.println( "Draw! Game over." );
 	}
-
-
 	/**
 	 * Inserts the token at the specified column (if possible)
 	 * @param column the column to insert the token
 	 * @param tok the players token
-	 * @return the row where the token landed 
+	 * @return the row where the token landed
 	 */
 	private int insertToken( int column, Token tok ) {
 		for (int i = 0; i < this.board[column].length; i++){
@@ -83,7 +74,7 @@ public class VierGewinnt
 
 
 	/**
-	 * Checks if every position is occupied 
+	 * Checks if every position is occupied
 	 * @returns true, if the board is full.
 	 */
 	private boolean isBoardFull() {
@@ -100,7 +91,7 @@ public class VierGewinnt
 
 	/**
 	 * Checks for at least four equal tokens in a row in
-	 * either direction, starting from the given position. 
+	 * either direction, starting from the given position.
 	 */
 
 	/**
@@ -138,11 +129,11 @@ public class VierGewinnt
 		}
 		return inrow>=4;
 	}
-	private boolean checkDiagonalWin(int col,int row, Token tok){
-		return checkBLTR(col, row,tok)||checkBRTL(col,row,tok);
+	private boolean checkDiagonalWin(int row, int col, Token tok){
+		return checkBLTR(row,col,tok)||checkBRTL(row,col,tok);
 	}
 	//BLTR = Bottom Left to Top Right
-	private boolean checkBLTR(int col, int row, Token tok){
+	private boolean checkBLTR(int row, int col, Token tok){
 		int inrow = 1;
 		//top right direction (in the output it's the bottom right direction)
 		for (int i = 1; i < 4 && i < COLS-col-1 && i < row; i++){
@@ -160,9 +151,26 @@ public class VierGewinnt
 		}
 
 		return inrow>=4;
+		/*
+		for (int i = 1; i<this.board.length-row&&i<this.board[col].length;i++){
+			try{
+				if (this.board[col+i][row+i]==tok){
+					inrow++;
+				}
+				else{i = this.board.length;}
+			}catch (ArrayIndexOutOfBoundsException ignored){i=this.board.length;}
+		}
+		for (int i = 1; i<col+1&&i<row+1;i++){
+			if (this.board[col-i][row-i]==tok){
+				inrow++;
+			}
+			else{i = col+1;}
+		}
+		return inrow>=4;
+		 */
 	}
 	//BRTL = Bottom Right to Top Left
-	private boolean checkBRTL(int col, int row, Token tok){
+	private boolean checkBRTL(int row, int col, Token tok){
 		int inrow = 1;
 		//top left direction
 		for (int i = 1; i < 4 && i < col+1 && i < row; i++){
@@ -179,11 +187,37 @@ public class VierGewinnt
 			else{i=4;}
 		}
 		return inrow>=4;
+		/*
+		for (int i = 1; i<(this.board[col].length)-row && i<(this.board.length)-col; i++){
+			try{
+			if (this.board[col-i][row+i]==tok){
+				inrow++;
+			}
+			else{i=this.board.length;}
+			}catch (ArrayIndexOutOfBoundsException ignored){i=this.board.length;}
+		}
+		for (int i = 1; i<row && i<col; i++){
+			if (this.board[col+i][row-i]==tok){
+				inrow++;
+			}
+			else{i=row;}
+		}
+		 */
 	}
 
 
 
 	/** Returns a (deep) copy of the board array */
+
+
+
+
+
+
+
+
+
+
 	private Token[][] getCopyOfBoard()
 	{
 		Token[][] copiedBoard = new Token[ COLS ][ ROWS ];
@@ -194,8 +228,6 @@ public class VierGewinnt
 		}
 		return copiedBoard;
 	}
-
-
 	/** returns a graphical representation of the board */
 	public static String displayBoard( Token[][] myBoard )
 	{
@@ -206,7 +238,6 @@ public class VierGewinnt
 			rowNumbering += " " + ( col + 1 ) + "  ";
 		}
 		rowDelimiter += "\n";
-
 		String rowStr;
 		String presentation = rowDelimiter;
 		for ( int row = myBoard[ 0 ].length - 1; row >= 0; row-- ) {
@@ -219,9 +250,6 @@ public class VierGewinnt
 		presentation += rowNumbering;
 		return presentation;
 	}
-
-
-
 	/** main method, starts the program */
 	public static void main( String args[] )
 	{

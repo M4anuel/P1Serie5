@@ -7,8 +7,6 @@
     <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="Vier Gewinnt diagonal check funkt nicht">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/VierGewinnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinnt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/VierGewinntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.VierGewinntTest">
+  <component name="RunManager" selected="Application.VierGewinnt">
     <configuration name="ArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.ArrayTest" />
       <module name="P1Serie5" />
@@ -108,8 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.VierGewinntTest" />
         <item itemvalue="Application.VierGewinnt" />
+        <item itemvalue="Application.VierGewinntTest" />
         <item itemvalue="Application.ArrayTest" />
         <item itemvalue="Application.MatrixTest" />
         <item itemvalue="Application.Concurrent" />
