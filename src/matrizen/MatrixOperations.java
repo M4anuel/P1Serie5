@@ -9,12 +9,10 @@ public class MatrixOperations {
     public static int[][] product(int[][] matrix1, int[][] matrix2){
         int[][] matrix3 = new int[matrix1.length][matrix1.length];
         for(int i=0; i<matrix1.length;i++){
-
             //control
             if(matrix1.length!=matrix2[i].length){
                 return null;
             }
-
             for(int j=0; j<=matrix1.length-1; j++){
                 for(int k=0; k<=matrix1.length-1; k++){
                     matrix3[i][j] += matrix1[i][k]*matrix2[k][j];
