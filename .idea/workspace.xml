@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="Vier Gewinnt diagonal check funkt nicht">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/VierGewinnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinnt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/VierGewinntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinntTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="Vier Gewinnt funktioniert" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668702925596</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Vier Gewinnt funktioniert">
+      <created>1668716943801</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668716943801</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +181,8 @@
     <MESSAGE value="d" />
     <MESSAGE value="Vier Gewinnt funktioniert hoffentlich (nur minimal getestet)" />
     <MESSAGE value="Vier Gewinnt diagonal check funkt nicht" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vier Gewinnt diagonal check funkt nicht" />
+    <MESSAGE value="Vier Gewinnt funktioniert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vier Gewinnt funktioniert" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/P1Serie5$VierGewinnt.ic" NAME="VierGewinnt Coverage Results" MODIFIED="1668697184239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
