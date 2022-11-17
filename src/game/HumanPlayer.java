@@ -12,6 +12,10 @@ public class HumanPlayer implements IPlayer
 	private String playersName;
 	private static int humanCounts = 0;
 
+	public HumanPlayer(String s){
+		humanCounts++;
+		playersName=s;
+	}
 	public HumanPlayer()
 	{
 		humanCounts++;
@@ -27,8 +31,8 @@ public class HumanPlayer implements IPlayer
 		System.out.println( "\n" + VierGewinnt.displayBoard( board ) );
 		int column = -1;
 		while ( column < 0 || column >= board.length ) {
-			System.out.print( "Player " + this.token.toString()
-			                  + " choose a column between 1 and " + board.length + ": " );
+			System.out.print( "Player " + this.playersName
+			                  + " choose a column between 1 and " + board.length + " to put in your piece "+this.token.toString()+": " );
 			try {
 				column = Integer.parseInt( scan.nextLine() ) - 1;
 			} catch ( NumberFormatException e ) {
@@ -36,7 +40,6 @@ public class HumanPlayer implements IPlayer
 				System.out.println( "That is not even a number!" );
 			}
 			if ( column >= 0 && column < board.length ) {
-				int topRow = board[ 0 ].length - 1;
 				if ( isColFull( column, board ) ) {
 					System.out.println( "This column is full!" );
 					column = -1;

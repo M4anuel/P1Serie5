@@ -9,8 +9,8 @@ package game;
  */
 public enum Token {
        empty( " " ),
-       player1( "⚪" ),
-       player2( "⬤" );
+       player1( "x" ),
+       player2( "o" );
        private String representation; // string representation of value
        Token( String s ) { this.representation = s; }
        public String toString() { return this.representation; }

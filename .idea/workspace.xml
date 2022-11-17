@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="d">
-      <change afterPath="$PROJECT_DIR$/src/game/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_11_2022_14_09__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="54d804d0-ff05-4d1f-b9f1-32995c417f99" name="Changes" comment="Vier Gewinnt funktioniert hoffentlich (nur minimal getestet)">
+      <change afterPath="$PROJECT_DIR$/src/game/ArrayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/VierGewinntTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matrizen/Matrix.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/Matrix.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrizen/MatrixOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/ComputerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/VierGewinnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/VierGewinnt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.MatrixTest">
+  <component name="RunManager" selected="Application.VierGewinnt">
+    <configuration name="ArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.ArrayTest" />
+      <module name="P1Serie5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Concurrent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="matrizen.Concurrent" />
       <module name="P1Serie5" />
@@ -71,8 +83,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VierGewinnt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.VierGewinnt" />
+      <module name="P1Serie5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VierGewinntTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.VierGewinntTest" />
+      <module name="P1Serie5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VierGewinnt" />
+        <item itemvalue="Application.VierGewinntTest" />
+        <item itemvalue="Application.ArrayTest" />
         <item itemvalue="Application.MatrixTest" />
         <item itemvalue="Application.Concurrent" />
       </list>
@@ -88,6 +129,14 @@
       <updated>1667559524220</updated>
       <workItem from="1667559529868" duration="79000" />
     </task>
+    <task id="LOCAL-00001" summary="d">
+      <created>1668606151159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668606151159</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +155,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="d" />
+    <MESSAGE value="Vier Gewinnt funktioniert hoffentlich (nur minimal getestet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vier Gewinnt funktioniert hoffentlich (nur minimal getestet)" />
   </component>
 </project>

@@ -47,6 +47,6 @@ public class ComputerPlayer implements IPlayer
 
 	public String getPlayersName()
 	{
-		return "Random Player";
+		return "Computer";
 	}
 }
