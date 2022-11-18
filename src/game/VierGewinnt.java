@@ -96,40 +96,34 @@ public class VierGewinnt
 
 	private boolean checkVierGewinnt( int col, int row ){
 		Token tok = this.board[col][row];
-		return checkColumnWin(col, row, tok)|| checkRowWin(col,row,tok)||checkDiagonalWin(col,row,tok);
+		return checkColumnWin(col, row, tok) || checkRowWin(col,row,tok) || checkDiagonalWin(col,row,tok);
 	}
 	private boolean checkColumnWin(int col, int row, Token tok){
 		int inrow = 1;
 		//only has to check downwards, since you'll never have placed tokens above the one you just put in
-		for (int i = 1; i<row+1&&i<4;i++){
-			if (this.board[col][row-i]==tok){
-				inrow++;
-			}
-			else{i = row+1;}
-		}
-		return inrow >= 4;
+		for (int i = 1; i <= row && i < 4 ; i++){
+			if (this.board[col][row-i]==tok){inrow++;}
+			else{break;}
+		}return inrow >= 4;
 	}
 	private boolean checkRowWin(int col, int row, Token tok){
 		int inrow = 1;
-		for (int i = 1; i<this.board.length-row && i<4;i++){//test-1 for bug
-			if (this.board[col+i][row]==tok){
-				inrow++;
-			}
-			else{i = this.board.length;}
+		//towards the left of the array
+		for (int i = 1; i <= col && i < 4; i++){
+			if (this.board[col-i][row]==tok){inrow++;}
+			else{break;}
 		}
-		for (int i = 1; i<col+1&&i<4;i++){
-			if (this.board[col-i][row]==tok){
-				inrow++;
-			}
-			else{i = col+1;}
-		}
-		return inrow>=4;
+		//towards the right of the array
+		for (int i = 1; i <= ROWS-row && i < 4; i++){
+			if (this.board[col+i][row]==tok){inrow++;}
+			else{break;}
+		}return inrow>=4;
 	}
-	private boolean checkDiagonalWin(int row, int col, Token tok){
-		return checkBLTR(row,col,tok)||checkBRTL(row,col,tok);
+	private boolean checkDiagonalWin(int col, int row, Token tok){
+		return checkBLTR(col,row,tok)||checkBRTL(col,row,tok);
 	}
 	//BLTR = Bottom Left to Top Right
-	private boolean checkBLTR(int row, int col, Token tok){
+	private boolean checkBLTR(int col, int row, Token tok){
 		int inrow = 1;
 		//top right direction (in the output it's the bottom right direction)
 		for (int i = 1; i < 4 && i < col && i < ROWS-row; i++){
@@ -141,11 +135,11 @@ public class VierGewinnt
 			if (this.board[col+i][row-i]==tok){inrow++;}
 			else{break;}
 		}
-		return inrow>=4;
+		return inrow>=3;
 	}
 
 	//BRTL = Bottom Right to Top Left
-	private boolean checkBRTL(int row, int col, Token tok){
+	private boolean checkBRTL(int col, int row, Token tok){
 		int inrow = 1;
 		//top left direction
 		for (int i = 1; i < 4 && i < ROWS-row && i < COLS-col; i++){
@@ -157,8 +151,10 @@ public class VierGewinnt
 			if (this.board[col-i][row-i]==tok){inrow++;}
 			else{break;}
 		}
-		return inrow>=4;
+		return inrow>=3;
 	}
+
+
 
 	/** Returns a (deep) copy of the board array */
 	private Token[][] getCopyOfBoard()
@@ -192,6 +188,27 @@ public class VierGewinnt
 		}
 		presentation += rowNumbering;
 		return presentation;
+	}
+
+	public boolean checkDiagonalAlternative(int col, int row, Token tok){
+		boolean returnwert = false;
+		if(col + 3 < this.board.length && row + 3 < this.board.length)
+		{
+			if(this.board[col][row] == tok && this.board[col+1][row+1] == tok && this.board[col+2][row+2] == tok && this.board[col+3][row+3] == tok)
+			{
+				returnwert = true;
+			}
+		}
+
+		if(col - 3 >= 0 && row + 3 < this.board.length)
+		{
+			if(this.board[col][row] == tok && this.board[col-1][row+1] == tok && this.board[col-2][row+2] == tok && this.board[col-3][row+3] == tok)
+			{
+				returnwert = true;
+			}
+		}
+
+		return returnwert;
 	}
 	/** main method, starts the program */
 	public static void main( String args[] )

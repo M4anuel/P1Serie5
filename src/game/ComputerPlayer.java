@@ -10,7 +10,7 @@ public class ComputerPlayer implements IPlayer
 {
 	private Token token;
 
-	/**
+	/**a
 	 * Strategy is to chose a random column and select
 	 * the next valid column to the right (the chosen included)
 	 */
